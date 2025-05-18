@@ -22,10 +22,7 @@ const HeroSection: React.FC = () => {
               <a href="#work" className="btn-primary flex items-center gap-2">
                 View Our Work
                 <ArrowRight size={16} />
-              </a>
-              <a href="#contact" className="btn-secondary">
-                Get a Free Quote
-              </a>
+              </a>             
             </div>
             
             <div className="text-sm text-gray-500 border-l-2 border-synaptic-teal pl-3 animate-fade-in" style={{ animationDelay: '0.6s' }}>

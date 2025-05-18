@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Logo from '../ui/Logo';
 import { Menu, X } from 'lucide-react';
@@ -21,6 +20,13 @@ const Navbar: React.FC = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const menuItems = [
+    { label: 'Services', id: 'services' },
+    { label: 'Portfolio', id: 'work' },
+    { label: 'Process', id: 'process' },
+    { label: 'Contact', id: 'contact' }
+  ];
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -35,20 +41,17 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <ul className="flex gap-6">
-            {['Services', 'Work', 'Process', 'About', 'Contact'].map((item) => (
-              <li key={item}>
+            {menuItems.map((item) => (
+              <li key={item.label}>
                 <a 
-                  href={`#${item.toLowerCase()}`} 
+                  href={`#${item.id}`} 
                   className="font-medium hover:text-synaptic-teal transition-colors"
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn-primary">
-            Get a Quote
-          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -64,26 +67,17 @@ const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <nav className="md:hidden bg-white border-t mt-3 py-4 animate-fade-in">
           <ul className="flex flex-col container mx-auto">
-            {['Services', 'Work', 'Process', 'About', 'Contact'].map((item) => (
-              <li key={item} className="py-3 border-b border-gray-100">
+            {menuItems.map((item) => (
+              <li key={item.label} className="py-3 border-b border-gray-100">
                 <a 
-                  href={`#${item.toLowerCase()}`} 
+                  href={`#${item.id}`} 
                   className="block font-medium hover:text-synaptic-teal transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               </li>
             ))}
-            <li className="py-3 mt-2">
-              <a 
-                href="#contact" 
-                className="btn-primary inline-block"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get a Quote
-              </a>
-            </li>
           </ul>
         </nav>
       )}

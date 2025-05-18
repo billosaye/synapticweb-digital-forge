@@ -1,13 +1,12 @@
-
 import React from 'react';
 import Logo from '../ui/Logo';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-synaptic-charcoal text-white py-16">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="space-y-4">
             <Logo className="text-white" />
             <p className="text-gray-300 mt-4">
@@ -50,6 +49,31 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-bold mb-4">Contact Us</h4>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin size={20} className="text-synaptic-teal mt-1" />
+                <div>
+                  <p className="text-gray-300">Parklands, Nairobi</p>
+                  <p className="text-gray-300">MegaCity, Kisumu</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={20} className="text-synaptic-teal" />
+                <a href="tel:+254746220913" className="text-gray-300 hover:text-synaptic-teal transition-colors">
+                  +254 746 220 913
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail size={20} className="text-synaptic-teal" />
+                <a href="mailto:osayebilly98@gmail.com" className="text-gray-300 hover:text-synaptic-teal transition-colors">
+                  osayebilly98@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
 
           <div>

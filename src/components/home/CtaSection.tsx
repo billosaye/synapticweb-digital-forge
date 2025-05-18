@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Mail, MessageCircle } from 'lucide-react';
 
 const CtaSection: React.FC = () => {
   return (
@@ -9,61 +9,30 @@ const CtaSection: React.FC = () => {
           <div className="grid md:grid-cols-5">
             <div className="md:col-span-3 p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-synaptic-charcoal mb-4">
-                Ready to Build Something Great?
+                Get in Touch
               </h2>
               <p className="text-gray-600 mb-8">
                 Whether you're launching your startup or rebranding your platform, we'll help bring your vision to life.
               </p>
               
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring focus:ring-synaptic-teal/20 focus:border-synaptic-teal outline-none"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring focus:ring-synaptic-teal/20 focus:border-synaptic-teal outline-none"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
+              <div className="space-y-6">
+                <a 
+                  href="mailto:osayebilly98@gmail.com"
+                  className="flex items-center gap-3 px-6 py-4 bg-synaptic-teal text-white rounded-lg hover:bg-synaptic-teal/90 transition-colors"
+                >
+                  <Mail size={24} />
+                  <span>Email Us</span>
+                </a>
                 
-                <div>
-                  <label htmlFor="project" className="block text-sm font-medium mb-1">
-                    Project Details
-                  </label>
-                  <textarea
-                    id="project"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring focus:ring-synaptic-teal/20 focus:border-synaptic-teal outline-none"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-                
-                <div>
-                  <button type="submit" className="btn-primary w-full">
-                    Request a Free Quote
-                  </button>
-                </div>
-              </form>
-              
-              <div className="mt-6 text-center">
-                <p className="text-gray-500 text-sm">
-                  or <a href="#" className="text-synaptic-teal hover:underline">schedule a discovery call</a>
-                </p>
+                <a 
+                  href="https://wa.me/254746220913"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                >
+                  <MessageCircle size={24} />
+                  <span>Chat on WhatsApp</span>
+                </a>
               </div>
             </div>
             

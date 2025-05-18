@@ -1,25 +1,48 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
-    title: 'TechCloud Platform',
-    category: 'Web Application',
-    description: 'A cloud services dashboard with analytics and real-time monitoring.'
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f',
+    title: 'Nyanga Law Firm',
+    category: 'Legal Services',
+    description: 'A professional law firm providing comprehensive legal services with expertise in corporate, family, and civil law matters.',
+    link: 'https://www.nyangalaw.org/'
   },
   {
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
-    title: 'FutureBrand',
-    category: 'Branding & Website',
-    description: 'Complete digital rebrand and website for tech startup.'
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8',
+    title: 'Billy Essays',
+    category: 'Academic Writing',
+    description: 'Professional essay writing and academic assistance platform helping students achieve their educational goals.',
+    link: 'https://billyessays.vercel.app/'
   },
   {
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-    title: 'CodeConnect',
-    category: 'Developer Platform',
-    description: 'Community platform connecting developers with collaborative projects.'
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d',
+    title: 'Imara Mediplus Hospital',
+    category: 'Healthcare',
+    description: 'A multi-specialty healthcare facility providing world-class medical services with a focus on patient care and comfort.',
+    link: 'https://imaramed.org/'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433',
+    title: 'Citizens Impart',
+    category: 'Charity Organization',
+    description: 'Dedicated to empowering communities through education, healthcare, and sustainable development initiatives.',
+    link: 'https://www.citizens-impart.org/'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09',
+    title: 'Arrow Dental',
+    category: 'Dental Care',
+    description: 'Premier dental clinic offering comprehensive oral healthcare services with state-of-the-art facilities and expert care.',
+    link: 'https://arrowdental.co.ke/'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae',
+    title: 'Mirenz Music School',
+    category: 'Music Education',
+    description: 'Inspiring musical excellence through comprehensive education and practice in various instruments and vocal training.',
+    link: 'https://mirenzmusic.vercel.app/'
   }
 ];
 
@@ -69,7 +92,9 @@ const PortfolioSection: React.FC = () => {
                   {project.description}
                 </p>
                 <a 
-                  href="#" 
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-synaptic-indigo font-medium hover:text-synaptic-teal transition-colors"
                 >
                   View Project <ArrowRight size={16} />
@@ -77,16 +102,7 @@ const PortfolioSection: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center md:hidden">
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 text-synaptic-indigo hover:text-synaptic-teal transition-colors"
-          >
-            See Full Portfolio <ArrowRight size={16} />
-          </a>
-        </div>
+        </div>    
       </div>
     </section>
   );

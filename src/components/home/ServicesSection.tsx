@@ -49,13 +49,7 @@ const ServicesSection: React.FC = () => {
               </h3>
               <p className="text-gray-600">
                 {service.description}
-              </p>
-              <a 
-                href="#contact" 
-                className="inline-block mt-6 text-synaptic-teal font-medium hover:underline"
-              >
-                Learn more
-              </a>
+              </p>             
             </div>
           ))}
         </div>
